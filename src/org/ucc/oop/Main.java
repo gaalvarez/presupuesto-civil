@@ -1,14 +1,20 @@
 package org.ucc.oop;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
+/**
+ *</p>
+ * Learn the Basics
+ * + Hello, World!
+ * + Variables and Types
+ * + Conditionals
+ * + Arrays
+ * + Loops
+ * + Functions
+ * + Practice
+ */
 public class Main {
 
-	private static Logger log = Logger.getLogger(Main.class.getName());
-
 	public static void main(String[] args) {
-		log.log(Level.WARNING, "HELLO WORLD");
+		System.out.println("Hello World");
 	}
 
 }
