@@ -1,10 +1,16 @@
 package org.ucc.oop;
 
+import java.text.ParseException;
+
+import org.ucc.oop.tutorial.Loops;
+import org.ucc.oop.tutorial.Practices;
+import org.ucc.oop.tutorial.Student;
+
 /**
  *</p>
  * Learn the Basics
- * + Hello, World!
- * + Variables and Types
+ * x Hello, World!
+ * x Variables and Types
  * + Conditionals
  * + Arrays
  * + Loops
@@ -14,7 +20,7 @@ package org.ucc.oop;
 public class Main {
 
 	public static void main(String[] args) {
-		System.out.println("Hello World");
+		Student student = new Student("Angela", "Lara", 22);
+		System.out.println(student.presentation(false));
 	}
-
 }

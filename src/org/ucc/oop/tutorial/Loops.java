@@ -4,23 +4,26 @@
 package org.ucc.oop.tutorial;
 
 /**
- * + Loops: 
- * ++ For 
- * ++ Foreach 
- * ++ Break and continue 
- * ++ While
+ * + Loops: ++ For ++ Foreach ++ Break and continue ++ While
  */
 public class Loops {
 
+	/**
+	 * array.length array[i]
+	 */
 	public void run() {
-		for (int i = 0; i < 3; i++) {
-			System.out.println("i: " + i);
+		int[] array = { 1, 2, 3, 4, 5 };
+		for (int i : array) {
+			System.out.println(i);
 		}
-		int j = 0;
-		while (j < 3) {
-			System.out.println("j: " + j);
-			j = j + 1; //increment j
-		}
+//		for (int i = 0; i < array.length; i++) {
+//			System.out.println("i: " + array[i] * 2);
+//		}
+//		int j = 0;
+//		while (j < array.length) {
+//			System.out.println("j: " + array[j]);
+//			j = j + 1; // increment j
+//		}
 	}
 
 }

@@ -13,10 +13,11 @@ package org.ucc.oop.tutorial;
 public class Conditionals {
 
 	public void run() {
-		int result = 5;
-		boolean b = result == 5;
-		if (b) {
-		    System.out.println("You are a genius!");
-		}
+		String a = new String("Wow");
+		String b = new String("Wow");
+		String as = a;
+		System.out.println(a == b);//true | false
+		System.out.println(a.equals(b));//true | true
+		System.out.println(a == as);//true | true
 	}
 }
