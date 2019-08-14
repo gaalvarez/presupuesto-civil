@@ -8,17 +8,18 @@ package org.ucc.oop.tutorial;
  *
  */
 public class Student {
+
+
+	private String name;
+	private String lastName;
+	private int age;
+	
 	
 	public Student(String name, String lastName, int age) {
 		this.name = name;
 		this.lastName = lastName;
 		this.age = age;
 	}
-
-	private String name;
-	private String lastName;
-	private Float weight;
-	private int age;
 
 	public String presentation(boolean shortPresentation) {
 		if (shortPresentation) {
@@ -44,14 +45,6 @@ public class Student {
 		this.lastName = lastName;
 	}
 
-	public Float getWeight() {
-		return weight;
-	}
-
-	public void setWeight(Float weight) {
-		this.weight = weight;
-	}
-
 	public int getAge() {
 		return age;
 	}
@@ -59,4 +52,17 @@ public class Student {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	
+	public boolean equals(Student other) {
+		if (!this.name.equals(other.getName())) {
+        	return false; 
+		}
+		if (!this.lastName.equals(other.getLastName())) {
+        	return false; 
+		}
+		if (this.age != other.getAge()) {
+        	return false; 
+		}
+		return true;
+    }
 }

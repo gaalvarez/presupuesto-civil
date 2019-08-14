@@ -7,7 +7,7 @@ package org.ucc.oop.tutorial;
  * Not all in JAVA are Objects.
  * 
  * + Primitives in Java:
- * ++ byte (number, 1 byte) => 8 bits => 2 elv 8 => 256 => -128 to 128
+ * ++ byte (number, 1 byte) => 8 bits => 2 elv 8 => 256 => -128 to 127
  * ++ short (number, 2 bytes)
  * ++ int (number, 4 bytes)
  * ++ long (number, 8 bytes)
