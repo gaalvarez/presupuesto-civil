@@ -4,12 +4,12 @@ public class CuentaBancaria {
 
 	private String numero;
 	private Double saldo;
-	private Persona titular;
+	private Titular titular;
 	private Banco banco;
 	private boolean estado;
 	private Transaccion[] transacciones;
 
-	public CuentaBancaria(String numero, Persona titular, Banco banco) {
+	public CuentaBancaria(String numero, Titular titular, Banco banco) {
 		super();
 		this.saldo = 0D;
 		this.estado = true;
@@ -30,14 +30,19 @@ public class CuentaBancaria {
 	public Double getSaldo() {
 		return saldo;
 	}
-	
-	public void modificarSaldo(Transaccion transaccion ) {
+
+	public void modificarSaldo(Transaccion transaccion) {
 		if (transaccion.getTipo().equals("CONSIGNACION")) {
 			this.consignar(transaccion.getMonto());
 		}
 		if (transaccion.getTipo().equals("RETIRO")) {
 			this.retirar(transaccion.getMonto());
 		}
+	}
+
+	public String generarCertificado() {
+		return "Ésta cuenta con número: " + this.numero + " Está a nombre de : " + this.titular.getNombres()
+				+ "identificado con número de cédula: " + this.titular.getIdentificacion() + " con estado: " + (this.estado ? "Activa" : "Inactiva");
 	}
 
 	public Double obtenerInteresGenerado() {
@@ -64,7 +69,7 @@ public class CuentaBancaria {
 		return numero;
 	}
 
-	public Persona getTitular() {
+	public Titular getTitular() {
 		return titular;
 	}
 

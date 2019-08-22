@@ -7,7 +7,7 @@ package org.ucc.oop.banco;
  * @author iotec_ceo
  *
  */
-public class Persona {
+public class Persona implements Titular {
 
 	private String nombres;
 	private String apellidos;
