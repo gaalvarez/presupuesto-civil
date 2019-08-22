@@ -12,7 +12,7 @@ package org.ucc.oop.tutorial;
  * ++ int (number, 4 bytes)
  * ++ long (number, 8 bytes)
  * ++ float (float number, 4 bytes)
- * ++ double (float number, 8 bytes)
+ * ++ double (float number, 8 bytes) 
  * ++ char (a character, 2 bytes)
  * ++ boolean (true or false, 1 byte)
  * ++ Local and Global variables
