@@ -7,8 +7,16 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import com.sun.tools.javac.util.StringUtils;
+
 /**
- * @author iotec_ceo
+ * @author gaalvarez
+ * 
+ *         Esta clase permite el registro de los datos de una cuenta bancaria
+ *         que posee un Titular.
+ *         <p>
+ *         Cuenta con un método para el registro de movimientos en la cuenta
+ *         {@link #registrarMovimiento(Movimiento)}
  *
  */
 public class CuentaBancaria {
@@ -51,13 +59,21 @@ public class CuentaBancaria {
 		}
 	}
 
-	public void registrarMovimiento(Movimiento movimiento) {
+	/**
+	 * Recibe un objeto de tipo Movimiento para el registro de una consignación o
+	 * retiro según sea su tipo.
+	 * 
+	 * @param movimiento con la información del movimiento a registrar
+	 * @return un Double con el valor del saldo luego de registrado el movimiento
+	 */
+	public Double registrarMovimiento(Movimiento movimiento) {
 		this.movimientos[indiceMovimientos++] = movimiento;
 		if (TipoMovimiento.RETIRO.equals(movimiento.getTipoMovimiento())) {
 			this.retirar(movimiento.getMonto());
 		} else {
 			this.consignar(movimiento.getMonto());
 		}
+		return saldo;
 	}
 
 	public Movimiento consultarInteresMensual() {
