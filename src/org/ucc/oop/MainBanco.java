@@ -8,6 +8,19 @@ import org.ucc.oop.banco.Persona;
 import org.ucc.oop.banco.PersonaJuridica;
 import org.ucc.oop.banco.Transaccion;
 
+
+/**
+ * EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					CrearProyectoFrame frame = new CrearProyectoFrame();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+ */
 public class MainBanco {
 
 	public static void main(String[] args) {
